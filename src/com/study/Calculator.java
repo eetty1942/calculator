@@ -56,6 +56,14 @@ public class Calculator {
 			Division(val1, val2);
 			break;
 		}
+		
+		System.out.printf("전체출력(추가기능?) \n");
+		Adder(val1, val2);
+		Subtractor(val1, val2);
+		Multiplier(val1, val2);
+		Division(val1, val2);
+
+		
 		scan.close();
 	}
 }
