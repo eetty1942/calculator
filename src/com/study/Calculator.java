@@ -4,19 +4,19 @@ import java.util.Scanner;
 
 public class Calculator {
 
-	public static int Adder(int val1, int val2) {
+	public static int add(int val1, int val2) {
 		return val1 + val2;
 	}
 
-	public static int Subtractor(int val1, int val2) {
+	public static int subtract(int val1, int val2) {
 		return val1 - val2;
 	}
 
-	public static int Multiplier(int val1, int val2) {		
+	public static int multiply(int val1, int val2) {		
 		return val1 * val2;
 	}
 
-	public static int Division(int val1, int val2) {
+	public static float divide(int val1, int val2) {
 		return val1 / val2;
 	}
 
@@ -25,13 +25,13 @@ public class Calculator {
 		return toHex;
 	}
 
-
-	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
-		int val1, val2;
+		int val1; 
+		int val2;
 		int result=0;
+		float div_result=0;
 		int input;
 		int sel = 0;
 				
@@ -55,29 +55,22 @@ public class Calculator {
 		
 		switch (sel) {
 			case 1:
-				result = Adder(val1, val2);
+				result = add(val1, val2);
 				System.out.printf("더하기 : %d", result);
 				break;
 			case 2:
-				result = Subtractor(val1, val2);
+				result = subtract(val1, val2);
 				System.out.printf("빼   기 : %d", result);
 				break;
 			case 3:
-				result = Multiplier(val1, val2);
+				result = multiply(val1, val2);
 				System.out.printf("곱하기 : %d", result);
 				break;
 			case 4:
-				result = Division(val1, val2);
-				System.out.printf("나누기 : %d", result);
+				div_result = divide(val1, val2);
+				System.out.printf("나누기 : %f", result);
 				break;
-		}
-
-		System.out.printf("전체출력(추가기능?) \n");
-		Adder(val1, val2);
-		Subtractor(val1, val2);
-		Multiplier(val1, val2);
-		Division(val1, val2);	
-		
+		}	
 		scan.close();
 	}
 }
